@@ -1,6 +1,37 @@
-#include <iostream>
+//
+// Created by changhyeonnam on 2021/12/25.
+//
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+#include <iostream>
+#include <cstring>
+#include <string>
+#include <algorithm>
+#include <vector>
+#include <queue>
+#include <stack>
+#include <map>
+#include <set>
+#include <cmath>
+#define endl '\n'
+#define INF 1e9
+#define LINF 9223372036854775807
+using namespace std;
+
+typedef long long ll;
+typedef pair<int, int> pi;
+typedef tuple<int, int, int> tup;
+ll gcd(ll a, ll b) { for (; b; a %= b, swap(a, b)); return a; }
+priority_queue<tup,vector<tup>,greater<tup>> edge;
+
+int t;
+
+
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);cout.tie(NULL);
+
+
     return 0;
 }
+
