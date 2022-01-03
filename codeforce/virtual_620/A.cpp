@@ -1,4 +1,3 @@
-//
 //#include <iostream>
 //#include <cstring>
 //#include <string>
@@ -21,12 +20,20 @@
 //priority_queue<tup,vector<tup>,greater<tup>> edge;
 //
 //int t;
-//
-//
+//int x,y,a,b;
 //int main(){
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(NULL);cout.tie(NULL);
-//
+//    cin>>t;
+//    while(t--){
+//        cin>>x>>y>>a>>b;
+//        int sum = a+b;
+//        if((y-x)%sum==0){
+//            cout<<(y-x)/sum<<endl;
+//        }
+//        else
+//            cout<<-1<<endl;
+//    }
 //    return 0;
 //}
 //
