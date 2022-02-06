@@ -22,11 +22,31 @@
 //
 //int t;
 //
-//
 //int main(){
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(NULL);cout.tie(NULL);
-//
+//    cin>>t;
+//    while(t--){
+//        int n,k;
+//        cin>>n>>k;
+//        string s;
+//        cin>>s;
+//        if(k==0){
+//            cout<<1<<endl;
+//            continue;
+//        }
+//        bool check = true;
+//        for(int i=0;i<n/2;i++){
+//            if(s[n-1-i]!=s[i]) {
+//                check = false;
+//                break;
+//            }
+//        }
+//        if(!check)
+//            cout<<2<<endl;
+//        else
+//            cout<<1<<endl;
+//    }
 //    return 0;
 //}
 //
