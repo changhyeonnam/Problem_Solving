@@ -27,7 +27,13 @@
 //    cin.tie(NULL);cout.tie(NULL);
 //    cin>>t;
 //    while(t--){
-//
+//        int n;
+//        int a[100];
+//        int b[100];
+//        vector<int>v;
+//        cin>>n;
+//        for(int i=0;i<n;i++)
+//            cin>>a[i];
 //    }
 //    return 0;
 //}

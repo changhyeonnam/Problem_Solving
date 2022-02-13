@@ -27,7 +27,26 @@
 //    cin.tie(NULL);cout.tie(NULL);
 //    cin>>t;
 //    while(t--){
+//        int n;
+//        cin>>n;
+//        int arr[100];
+//        for(int i=0;i<n;i++){
+//            cin>>arr[i];
+//        }
+//        ll ans = 0;
 //
+//        for(int i=0;i<n;i++){
+//            vector<int>v;
+//            int cnt=0;
+//
+//            for(int j=i;j<n;j++){
+//                v.push_back(arr[j]);
+//                if(arr[j]==0)
+//                    cnt+=1;
+//                ans+=v.size()+cnt;
+//            }
+//        }
+//        cout<<ans<<endl;
 //    }
 //    return 0;
 //}

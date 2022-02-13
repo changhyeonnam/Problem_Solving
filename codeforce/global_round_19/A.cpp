@@ -27,6 +27,26 @@
 //    cin.tie(NULL);cout.tie(NULL);
 //    cin>>t;
 //    while(t--){
+//        int n;
+//        cin>>n;
+//        int arr[10000];
+//        int barr[10000];
+//        for(int i=0;i<n;i++) {
+//            cin >> arr[i];
+//            barr[i]=arr[i];
+//        }
+//        sort(arr,arr+n);
+//        bool check = true;
+//        for(int i=0;i<n;i++){
+//            if(arr[i]!=barr[i]) {
+//                check = false;
+//                break;
+//            }
+//        }
+//        if(!check)
+//            cout<<"YES"<<endl;
+//        else
+//            cout<<"NO"<<endl;
 //
 //    }
 //    return 0;
