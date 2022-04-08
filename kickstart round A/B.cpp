@@ -29,35 +29,42 @@
 //    while(t--){
 //        string str;
 //        cin>>str;
-//        ll sum = 0;
-//        for(int i=0;i<str.size();i++){
-//            sum+=(str[i]-'0');
-//            sum%=9;
+//        int sum=0;
+//        for(auto i:str){
+//            sum+=(i-'0');
 //        }
-//        string ret="";
-//        ret = (9-sum)+'0';
-//        if(ret=="9"){
-//            ret="0";
-//            string s1="";
-//            s1=str[0];
-//            str[0]=ret[0];
-//            str=s1+str;
+//        int x = 9-(sum%9);
+//        if(x==9){
+//            string tmp;
+//            for(int i=1;i<str.size();i++){
+//                tmp+=str[i];
+//            }
+//            str = str[0];
+//            str+='0';
+//            str+=tmp;
 //        }
-//        else {
-//            string s1="";
-//            int pos=-1;
+//        else{
+//            string tmp;
+//            bool check = false;
 //            for(int i=0;i<str.size();i++){
-//                if(int(str[i]-'0')<=int(ret[0]-'0'))
+//                if(check)
+//                {
+//                    tmp+=str[i];
 //                    continue;
+//                }
+//                if((str[i]-'0')>x){
+//                    check = true;
+//                    tmp+=char(x+'0');
+//                    tmp+=str[i];
+//                    continue;
+//                }
 //                else{
-//                    pos=i;
-//                    break;
+//                    tmp+=str[i];
 //                }
 //            }
-//            if(pos==-1)
-//                pos=str.size();
-//
-//            str.insert(pos,ret);
+//            if(!check)
+//                tmp+=char(x+'0');
+//            str = tmp;
 //        }
 //        cout<<"Case #"<<test-t<<": "<<str<<endl;
 //    }

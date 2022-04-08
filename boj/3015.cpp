@@ -1,4 +1,5 @@
 //
+//
 //#include <iostream>
 //#include <cstring>
 //#include <string>
@@ -21,35 +22,34 @@
 //priority_queue<tup,vector<tup>,greater<tup>> edge;
 //
 //int t;
-//bool check[100000];
+//
 //int main(){
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(NULL);cout.tie(NULL);
 //    cin>>t;
-//    int test = t;
+//    stack<pair<ll,ll>>st;
+//    ll ans =0;
 //    while(t--){
-//        string s;
-//        cin>>s;
-//        string s1;
-//        cin>>s1;
-//        int ptr1=0;
-//        int ans =0;
-//        for(int i=0;i<s1.size();i++){
-//            if(s1[i]==s[ptr1]){
-//                ptr1+=1;
-//                continue;
+//        ll num;
+//        cin>>num;
+//        ll val=1;
+//        if(!st.empty()  && st.top().first<=num){
+//            while(!st.empty()&&st.top().first<num) {
+//                ans += st.top().second;
+//                st.pop();
 //            }
-//            else{
-//                ans+=1;
+//            while(!st.empty()&&st.top().first==num){
+//                ans += st.top().second;
+//                val = st.top().second+1;
+//                st.pop();
 //            }
 //        }
-//        if(ptr1==s.size()){
-//            cout<<"Case #"<<test-t<<": "<<ans<<endl;
-//        }
-//        else{
-//            cout<<"Case #"<<test-t<<": "<<"IMPOSSIBLE"<<endl;
-//        }
+//        if(!st.empty())
+//            ans+=1;
+//        st.push({num,val});
 //    }
+//    cout<<ans<<endl;
+//
 //    return 0;
 //}
 //
