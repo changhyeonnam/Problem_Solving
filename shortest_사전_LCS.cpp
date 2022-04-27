@@ -1,4 +1,3 @@
-//
 //#include <iostream>
 //#include <cstring>
 //#include <string>
@@ -22,14 +21,36 @@
 //
 //int t;
 //
+//
+//
 //int main(){
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(NULL);cout.tie(NULL);
-//    cin>>t;
-//    while(t--){
-//        int n;
-//        cin>>n;
+//    map<char,int>mp;
+//    string str;
+//    string ans="";
+//    int k;
+//
+//    cin>>str;
+//    cin>>k;
+//    stack<char>stk;
+//
+//    for(int i=0;i<str.size();i++){
+//        if(stk.empty())
+//            stk.push(str[i]);
+//        else{
+//            while((!stk.empty())&&str[i]>stk.top()&&(stk.size()-1+str.size()-i)>=k){
+//                stk.pop();
+//            }
+//            if(stk.empty()||stk.size()<k)
+//                stk.push(str[i]);
+//        }
 //    }
+//    while(!stk.empty()){
+//        ans = stk.top()+ans;
+//        stk.pop();
+//    }
+//    cout<<ans;
 //    return 0;
 //}
 //
