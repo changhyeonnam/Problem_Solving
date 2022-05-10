@@ -28,8 +28,33 @@
 //    cin.tie(NULL);cout.tie(NULL);
 //    cin>>t;
 //    while(t--){
-//      int n;
-//      cin>>n;
+//        int n;
+//        cin>>n;
+//        int arr[100];
+//        int cnt_z=0;
+//        map<int,int>mp;
+//        for(int i=0;i<n;i++) {
+//            cin >> arr[i];
+//            if(arr[i]==0)cnt_z+=1;
+//            mp[arr[i]]+=1;
+//        }
+//        bool check = false;
+//        for(int i=1;i<=100;i++){
+//            if(mp.find(i)!=mp.end()){
+//                if(mp[i]>=2){
+//                    check = true;
+//                    break;
+//                }
+//            }
+//        }
+//        if(cnt_z>=1){
+//            cout<<n-cnt_z<<endl;
+//        }
+//        else if(check){
+//            cout<<n<<endl;
+//        }
+//        else cout<<n+1<<endl;
+//
 //
 //    }
 //    return 0;

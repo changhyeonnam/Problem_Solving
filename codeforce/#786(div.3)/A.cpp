@@ -7,6 +7,7 @@
 //#include <queue>
 //#include <stack>
 //#include <map>
+//
 //#include <set>
 //#include <cmath>
 //#define endl '\n'
@@ -16,7 +17,7 @@
 //
 //typedef long long ll;
 //typedef pair<int, int> pi;
-//typedef pair<ll, ll> pl;
+//typedef pair<int, int> pl;
 //typedef tuple<int, int, int> tup;
 //ll gcd(ll a, ll b) { for (; b; a %= b, swap(a, b)); return a; }
 //priority_queue<tup,vector<tup>,greater<tup>> edge;
@@ -28,9 +29,15 @@
 //    cin.tie(NULL);cout.tie(NULL);
 //    cin>>t;
 //    while(t--){
-//      int n;
-//      cin>>n;
-//
+//        int x,y;
+//        cin>>x>>y;
+//        if(y%x!=0)
+//            cout<<0<<' '<<0<<endl;
+//        else{
+//            int a = 1;
+//            int b = (y/x);
+//            cout<<a<<' '<<b<<endl;
+//        }
 //    }
 //    return 0;
 //}
