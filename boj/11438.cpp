@@ -22,37 +22,62 @@
 //priority_queue<tup,vector<tup>,greater<tup>> edge;
 //
 //int n;
-//vector<int>v[10001];
-//bool visited[10001];
-//vector<int>arr;
-//int dp[10001][2];
+//vector<int>v[100001];
+//int d[100001];
+//bool visited[100001];
+//int dp[100001][21];
 //
-//void dfs(int x){
+//int lca(int x, int y){
+//    if(d[x]>d[y])
+//        swap(x,y);
+//    for(int i=20;i>=0;i--){
+//        if(d[y]-d[x]>=(1<<i)){
+//            y = dp[y][i];
+//        }
+//        if(y==x)return x;
+//    }
+//    for(int i=20;i>=0;i--){
+//        if(dp[x][i]!=dp[y][i]){
+//            x= dp[x][i];
+//            y = dp[y][i];
+//        }
+//    }
+//    return dp[x][0];
+//}
+//void dfs(int x, int depth){
 //    visited[x]=true;
-//    dp[x][0]=arr[x];
-//    for(auto c:v[x]){
+//    d[x]=depth;
+//    for(auto c : v[x]){
 //        if(visited[c])
 //            continue;
-//        dfs(c);
-//        dp[x][0]+=dp[c][1];
-//        dp[x][1]+=max(dp[c][1],dp[c][0]);
+//        dp[c][0] = x;
+//        dfs(c,depth+1);
 //    }
+//
 //}
 //int main(){
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(NULL);cout.tie(NULL);
 //    cin>>n;
-//    arr.resize(n+1);
-//    for(int i=1;i<=n;i++)cin>>arr[i];
 //    for(int i=0,p1,p2;i<n-1;i++){
 //        cin>>p1>>p2;
 //        v[p1].push_back(p2);
 //        v[p2].push_back(p1);
 //    }
-//    memset(dp,0,sizeof(dp));
-//    memset(visited,false,sizeof(visited));
-//    dfs(1);
-//    cout<<max(dp[1][0],dp[1][1]);
+//    dfs(1,0);
+//
+//    for(int j=1;j<21;j++){
+//        for(int i=1;i<=n;i++){
+//            dp[i][j]=dp[dp[i][j-1]][j-1];
+//        }
+//    }
+//
+//    int m;
+//    cin>>m;
+//    for(int i=0,p1,p2;i<m;i++){
+//        cin>>p1>>p2;
+//        cout<<lca(p1,p2)<<endl;
+//    }
 //    return 0;
 //}
 //

@@ -21,14 +21,36 @@
 //ll gcd(ll a, ll b) { for (; b; a %= b, swap(a, b)); return a; }
 //priority_queue<tup,vector<tup>,greater<tup>> edge;
 //
-//int t,n;
+//int t;
+//int n,q;
 //
 //int main(){
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(NULL);cout.tie(NULL);
 //    cin>>t;
 //    while(t--){
-//        cin>>n;
+//        cin>>n>>q;
+//        vector<int>v;
+//        v.resize(n);
+//        for(int i=0;i<n;i++)cin>>v[i];
+//        sort(v.begin(),v.end(),greater<int>());
+//        vector<ll> pre;
+//        pre.resize(n);
+//        pre[0]=v[0];
+//        for(int i=1;i<n;i++){
+//            pre[i]=v[i]+pre[i-1];
+//        }
+//        for(int i=0;i<q;i++){
+//            ll x;
+//            cin>>x;
+//            auto iter = lower_bound(pre.begin(),pre.end(),x);
+//            if(iter==pre.end())
+//                cout<<-1<<endl;
+//            else{
+//                cout<<iter-pre.begin()+1<<endl;
+//            }
+//        }
+//
 //    }
 //    return 0;
 //}

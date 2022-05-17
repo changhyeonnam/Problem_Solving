@@ -29,6 +29,17 @@
 //    cin>>t;
 //    while(t--){
 //        cin>>n;
+//        vector<int>v;
+//        v.resize(n+1);
+//        for(int i=1;i<=n;i++)cin>>v[i];
+//        int ans =0;
+//        for(int i=1;i<=n;i++){
+//            for(int j=i+1;j<=n;j++){
+//                if(v[i]>=v[j])
+//                    ans+=1;
+//            }
+//        }
+//        cout<<ans<<endl;
 //    }
 //    return 0;
 //}

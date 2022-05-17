@@ -21,38 +21,54 @@
 //ll gcd(ll a, ll b) { for (; b; a %= b, swap(a, b)); return a; }
 //priority_queue<tup,vector<tup>,greater<tup>> edge;
 //
+//int t;
+//vector<int>v[4001];
 //int n;
-//vector<int>v[10001];
-//bool visited[10001];
-//vector<int>arr;
-//int dp[10001][2];
+//string s;
+//int dp[4001];
+//bool visited[4001];
 //
 //void dfs(int x){
 //    visited[x]=true;
-//    dp[x][0]=arr[x];
+//    if(s[x-1]=='W')
+//    {
+//        dp[x]+=1;
+//    }
+//    else{
+//        dp[x]-=1;
+//    }
 //    for(auto c:v[x]){
 //        if(visited[c])
 //            continue;
 //        dfs(c);
-//        dp[x][0]+=dp[c][1];
-//        dp[x][1]+=max(dp[c][1],dp[c][0]);
+//        dp[x]+=dp[c];
 //    }
 //}
 //int main(){
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(NULL);cout.tie(NULL);
-//    cin>>n;
-//    arr.resize(n+1);
-//    for(int i=1;i<=n;i++)cin>>arr[i];
-//    for(int i=0,p1,p2;i<n-1;i++){
-//        cin>>p1>>p2;
-//        v[p1].push_back(p2);
-//        v[p2].push_back(p1);
+//    cin>>t;
+//    while(t--){
+//        cin>>n;
+//        memset(dp,0,sizeof(dp));
+//        memset(visited,0,sizeof(visited));
+//        memset(v,0,sizeof(v));
+//        for(int i=2;i<=n;i++) {
+//            int p1;
+//            cin>>p1;
+//            v[p1].push_back(i);
+//        }
+//        cin>>s;
+//        dfs(1);
+//        int ans =0;
+//        for(int i=1;i<=n;i++){
+//            if(dp[i]==0) {
+//                ans += 1;
+//            }
+//        }
+//        cout<<ans<<endl;
+//
 //    }
-//    memset(dp,0,sizeof(dp));
-//    memset(visited,false,sizeof(visited));
-//    dfs(1);
-//    cout<<max(dp[1][0],dp[1][1]);
 //    return 0;
 //}
 //
