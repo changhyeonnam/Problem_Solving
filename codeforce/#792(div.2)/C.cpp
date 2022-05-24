@@ -21,23 +21,29 @@
 //ll gcd(ll a, ll b) { for (; b; a %= b, swap(a, b)); return a; }
 //priority_queue<tup,vector<tup>,greater<tup>> edge;
 //
-//int t,n;
+//int n,t;
+//
 //
 //int main(){
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(NULL);cout.tie(NULL);
+////    freopen("input.txt", "r", stdin);
 //    cin>>t;
 //    while(t--){
-//        int l1,r1,l2,r2;
-//        cin>>l1>>r1>>l2>>r2;
-//        if(l1<=l2 && l2<=r1){
-//            cout<<l2<<endl;
+//        cin>>n;
+//        map<int,int> mp;
+//        for(int i=0,p1;i<n;i++){
+//            cin>>p1;
+//            mp[p1]++;
 //        }
-//        else if(l2<=l1 && l1<=r2){
-//            cout<<l1<<endl;
+//        int ans = 0;
+//        for(auto [i,k] : mp){
+//            if(k>=2)ans+=2;
+//            else ans+=1;
 //        }
-//        else
-//            cout<<l1+l2<<endl;
+//        cout<<(ans+1)/2<<endl;
+//
+//
 //
 //    }
 //    return 0;

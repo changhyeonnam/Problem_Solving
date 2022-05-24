@@ -1,4 +1,3 @@
-//
 //#include <iostream>
 //#include <cstring>
 //#include <string>
@@ -21,24 +20,27 @@
 //ll gcd(ll a, ll b) { for (; b; a %= b, swap(a, b)); return a; }
 //priority_queue<tup,vector<tup>,greater<tup>> edge;
 //
-//int t,n;
+//int n,t,m;
+//
 //
 //int main(){
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(NULL);cout.tie(NULL);
+////    freopen("input.txt", "r", stdin);
 //    cin>>t;
 //    while(t--){
-//        int l1,r1,l2,r2;
-//        cin>>l1>>r1>>l2>>r2;
-//        if(l1<=l2 && l2<=r1){
-//            cout<<l2<<endl;
+//        cin>>n;
+//        vector<ll>v(n);
+//        for(auto& i:v)
+//            cin>>i;
+//        cin>>m;
+//        vector<ll>s(m);
+//        ll sum = 0;
+//        for(auto&i:s) {
+//            cin >> i;
+//            sum+=i;
 //        }
-//        else if(l2<=l1 && l1<=r2){
-//            cout<<l1<<endl;
-//        }
-//        else
-//            cout<<l1+l2<<endl;
-//
+//        cout<<v[sum%n]<<endl;
 //    }
 //    return 0;
 //}

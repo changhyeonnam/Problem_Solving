@@ -1,4 +1,3 @@
-//
 //#include <iostream>
 //#include <cstring>
 //#include <string>
@@ -21,23 +20,34 @@
 //ll gcd(ll a, ll b) { for (; b; a %= b, swap(a, b)); return a; }
 //priority_queue<tup,vector<tup>,greater<tup>> edge;
 //
-//int t,n;
+//int n,t;
+//
 //
 //int main(){
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(NULL);cout.tie(NULL);
+////    freopen("input.txt", "r", stdin);
 //    cin>>t;
 //    while(t--){
-//        int l1,r1,l2,r2;
-//        cin>>l1>>r1>>l2>>r2;
-//        if(l1<=l2 && l2<=r1){
-//            cout<<l2<<endl;
+//        cin>>n;
+//        vector<int>v(n);
+//        for(auto& i :v)
+//            cin>>i;
+//        sort(v.begin(),v.end());
+//        int m;
+//        cin>> m;
+//        vector<int>v2(m);
+//        for(auto&i:v2)
+//            cin>>i;
+//        sort(v2.begin(),v2.end());
+//        if(v[n-1]>=v2[m-1]){
+//            cout<<"Alice"<<endl;
 //        }
-//        else if(l2<=l1 && l1<=r2){
-//            cout<<l1<<endl;
+//        else cout<<"Bob"<<endl;
+//        if(v2[m-1]>=v[n-1]){
+//            cout<<"Bob"<<endl;
 //        }
-//        else
-//            cout<<l1+l2<<endl;
+//        else cout<<"Alice"<<endl;
 //
 //    }
 //    return 0;

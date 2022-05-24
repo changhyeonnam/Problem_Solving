@@ -50,7 +50,7 @@
 //int main(){
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(NULL);cout.tie(NULL);
-//    freopen("input.txt", "r", stdin);
+////    freopen("input.txt", "r", stdin);
 //    cin>>n>>x;
 //    if(n!=1 && x==1)
 //    {
