@@ -19,7 +19,7 @@
 //typedef tuple<int, int, int> tup;
 //ll gcd(ll a, ll b) { for (; b; a %= b, swap(a, b)); return a; }
 //
-//ll n;
+//ll m,n;
 //
 //int main(){
 //    ios_base::sync_with_stdio(0); cin.tie(0);
@@ -27,32 +27,9 @@
 //    freopen("./input.txt", "r", stdin);
 //#endif
 //
-//    int t;
-//    cin>>t;
-//    while(t--)
-//    {
-//        int c;
-//        cin>>n>>c;
-//        map<int,int>mp;
-//        int cnt = 0;
-//        int cnt1=0;
-//        for(int i=0;i<n;i++){
-//            int x;
-//            cin>>x;
-//            if(mp.find(x)!=mp.end()){
-//                mp[x]+=1;
-//            }
-//            else{
-//                mp[x]=1;
-//            }
-//            cnt+=1;
-//        }
-//        int ans=0;
-//        for(auto k:mp){
-//            ans += min(k.second,c);
-//        }
-//        cout<<ans<<endl;
-//    }
+//    cin>>m>>n;
+//
+//
 //
 //    return 0;
 //

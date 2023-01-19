@@ -1,3 +1,7 @@
+//
+//// Created by changhyeonnam on 2023/01/09.
+//
+//
 //#include <iostream>
 //#include <cstring>
 //#include <string>
@@ -18,8 +22,17 @@
 //typedef pair<ll, ll> pl;
 //typedef tuple<int, int, int> tup;
 //ll gcd(ll a, ll b) { for (; b; a %= b, swap(a, b)); return a; }
-//
 //ll n;
+//
+//struct cmp{
+//    bool operator()(int &a, int&b){
+//        if (abs(a)==abs(b)){
+//            return a>b;
+//        }
+//        return abs(a)>abs(b);
+//    }
+//};
+//priority_queue<int,vector<int>,cmp>pq;
 //
 //int main(){
 //    ios_base::sync_with_stdio(0); cin.tie(0);
@@ -27,31 +40,21 @@
 //    freopen("./input.txt", "r", stdin);
 //#endif
 //
-//    int t;
-//    cin>>t;
-//    while(t--)
-//    {
-//        int c;
-//        cin>>n>>c;
-//        map<int,int>mp;
-//        int cnt = 0;
-//        int cnt1=0;
-//        for(int i=0;i<n;i++){
-//            int x;
-//            cin>>x;
-//            if(mp.find(x)!=mp.end()){
-//                mp[x]+=1;
+//    cin>> n;
+//    for(int i=0, input;i<n;i++){
+//        cin>>input;
+//        if(input==0){
+//            if(pq.empty())
+//                cout<<0<<endl;
+//            else {
+//                cout<<pq.top()<<endl;
+//                pq.pop();
 //            }
-//            else{
-//                mp[x]=1;
-//            }
-//            cnt+=1;
 //        }
-//        int ans=0;
-//        for(auto k:mp){
-//            ans += min(k.second,c);
+//        else{
+//            pq.push(input);
 //        }
-//        cout<<ans<<endl;
+//
 //    }
 //
 //    return 0;
